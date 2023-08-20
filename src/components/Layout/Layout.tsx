@@ -1,15 +1,16 @@
-import { ReactNode } from "react";
-import { Outlet } from "react-router-dom";
+import { ReactNode } from 'react';
+import { Outlet } from 'react-router-dom';
+
+import styles from './layout.module.css';
 
 interface IlayoutProps {
-  children?: ReactNode; 
+  children?: ReactNode;
 }
 
 export function Layout({ children }: IlayoutProps) {
   return (
-    <>
-      {children}
+    <div className={styles.layout}>
       <Outlet />
-    </>
+    </div>
   );
 }
