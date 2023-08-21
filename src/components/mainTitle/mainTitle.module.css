@@ -3,7 +3,8 @@
   text-align: center;
   font-weight: 500;
   font-size: 42px;
-  color: aquamarine;
+  color: var(--black);
+  text-shadow: var(--text-shadow);
 }
 
 @media (max-width: 768px) {
