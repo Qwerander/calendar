@@ -1,6 +1,6 @@
 import { FormEvent, useState } from 'react';
-import { useAppDispatch } from '../../../store/hooks';
-import { addRecord } from '../../../store/reducers/calendarSlice';
+import { useAppDispatch } from '../../store/hooks';
+import { addRecord } from '../../store/reducers/calendarSlice';
 import { v4 as uuid } from 'uuid';
 
 export const useAddRecord = () => {

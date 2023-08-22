@@ -1,8 +1,8 @@
 import InputMask from 'react-input-mask';
 import styles from './userForm.module.css';
 import { useAddRecord } from './useAddRecord';
-import { useAppSelector } from '../../../store/hooks';
-import { selectTime } from '../../../store/reducers/calendarSlice';
+import { useAppSelector } from '../../store/hooks';
+import { selectTime } from '../../store/reducers/calendarSlice';
 
 export const UserForm = () => {
   const { handleSubmit, name, phone, setName, setPhone } = useAddRecord();
