@@ -8,7 +8,7 @@
   "jsxSingleQuote": true,
   "quoteProps": "as-needed",
   "useTabs": false,
-  "printWidth": 80,
+  "printWidth": 120,
   "bracketSameLine": true,
   "endOfLine": "auto"
 }

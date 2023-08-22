@@ -1,0 +1,75 @@
+.shedule {
+  width: 100%;
+  border: 2px solid #f4f4f4;
+  border-radius: 10px;
+}
+.schedule__header {
+  height: 74px;
+  background: #f4f4f4;
+  border-radius: 10px 10px 0px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.schedule__headerText {
+  color: #212121;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.schedule__body {
+  padding: 20px;
+  display: grid;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+}
+.schedule__time {
+  font-weight: 400;
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-content: space-evenly;
+  text-align: center;
+  color: #212121;
+  padding: 14px 0;
+  cursor: pointer;
+}
+.schedule__time:hover {
+  border: 2px solid #19be6f;
+  border-radius: 10px;
+}
+.schedule__timeActive {
+  border: 2px solid #06a7b3;
+  border-radius: 10px;
+  background: #19be6f;
+}
+
+/* 
+    @media (max-width: 1024px) {
+        .schedule {
+            &__time {
+                padding: 0;
+            }
+        }
+    }
+    
+    @media (max-width: 768px) {
+        
+        .schedule {
+            &__body {
+                padding: 10px;
+                gap: 10px;
+                grid-template-columns: repeat(4, 1fr);
+            }
+             
+            &__header {
+                &-text {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+         */
