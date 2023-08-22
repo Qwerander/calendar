@@ -19,7 +19,7 @@ export const RecordsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {Object.values(records).map((record) => (
+          {Object.values(records).sort((a, b) => a.time - b.time).map((record) => (
             <tr key={record.id}>
               <td>{record.name}</td>
               <td>{record.phone}</td>
