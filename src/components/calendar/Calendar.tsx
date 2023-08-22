@@ -13,11 +13,6 @@ export const Calendar = () => {
   const choosenDate = useAppSelector(selectChoosenDate);
   const { previousMonthDays, currentMonthDays, nextMonthDays, currentDate } = useCalendar(choosenDate);
 
-  // console.log(previousMonthDays);
-  // console.log(currentMonthDays);
-  // console.log(nextMonthDays);
-  // console.log(currentDate);
-
   const handleClick = (day: IDay) => {
     const date = new Date(Date.UTC(day.year, day.month, day.day)).toISOString();
     dispatch(setChoosenDate({ date }));
@@ -26,14 +21,14 @@ export const Calendar = () => {
   const changeMonthDecrease = () => {
     let date: string | Date = new Date(choosenDate);
     date.setUTCMonth(date.getUTCMonth() - 1);
-    date = date.toISOString()
+    date = date.toISOString();
     dispatch(setChoosenDate({ date }));
   };
 
   const changeMonthIncrease = () => {
     let date: string | Date = new Date(choosenDate);
     date.setUTCMonth(date.getUTCMonth() + 1);
-    date = date.toISOString()
+    date = date.toISOString();
     dispatch(setChoosenDate({ date }));
   };
 

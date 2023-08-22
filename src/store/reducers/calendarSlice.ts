@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSelector, createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 
 const now = new Date();
@@ -51,10 +51,11 @@ export const { setChoosenDate, addRecord, setTimeRecord, removeRecord } = calend
 
 export const selectCalendar = (state: RootState) => state.calendar.calendar;
 export const selectChoosenDate = (state: RootState) => state.calendar.choosenDate;
-export const selectRecords = (state: RootState) => {
-  const choosenDate = selectChoosenDate(state);
-  return state.calendar.calendar?.[choosenDate] || {};
-};
+export const selectRecords = createSelector(
+  (state: RootState) => state.calendar.calendar,
+  selectChoosenDate,
+  (calendar, choosenDate) => calendar?.[choosenDate] || {}
+);
 export const selectTime = (state: RootState) => state.calendar.time;
 
 export default calendarSlice.reducer;

@@ -2,11 +2,11 @@
   max-width: 1400px;
   margin: 0 auto;
   background-color: var(--white);
-  padding: 12px 32px 32px;
+  padding: 12px 32px 64px;
 }
 
 @media (max-width: 767px) {
   .layout {
-    padding: 12px 0 32px;
+    padding: 12px 0 64px;
   }
 }

@@ -1,6 +1,6 @@
-.shedule {
+.schedule {
   width: 100%;
-  border: 2px solid var(--dark);
+  border: 2px solid var(--gray);
   border-radius: 10px;
 }
 .schedule__header {
@@ -24,6 +24,7 @@
   align-content: space-evenly;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
+
 }
 .schedule__time {
   font-weight: 400;

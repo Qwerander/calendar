@@ -1,0 +1,11 @@
+.popUp {
+  padding: 24px;
+  border-radius: 10px;
+  background-color: var(--white);
+}
+
+.text {
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--black);
+}

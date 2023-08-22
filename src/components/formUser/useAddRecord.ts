@@ -7,6 +7,7 @@ export const useAddRecord = () => {
   const dispatch = useAppDispatch();
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [popUpShow, togglePopUp] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -30,6 +31,7 @@ export const useAddRecord = () => {
 
     setName('');
     setPhone('');
+    togglePopUp(true)
   };
 
   const validatePhone = (phone: string) => {
@@ -37,5 +39,5 @@ export const useAddRecord = () => {
     return digitsOnly.length > 10;
   };
 
-  return { name, setName, phone, setPhone, handleSubmit };
+  return { name, setName, phone, setPhone, handleSubmit, popUpShow, togglePopUp };
 };

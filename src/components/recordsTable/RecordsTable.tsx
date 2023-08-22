@@ -19,22 +19,24 @@ export const RecordsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {Object.values(records).sort((a, b) => a.time - b.time).map((record) => (
-            <tr key={record.id}>
-              <td>{record.name}</td>
-              <td>{record.phone}</td>
-              <td>{new Date(record.time * 1000).getHours()}:00</td>
-              <td>
-                <button
-                  className={styles.btn}
-                  onClick={() => {
-                    dispatch(removeRecord({ id: record.id }));
-                  }}>
-                  Отменить
-                </button>
-              </td>
-            </tr>
-          ))}
+          {Object.values(records)
+            .sort((a, b) => a.time - b.time)
+            .map((record) => (
+              <tr key={record.id}>
+                <td>{record.name}</td>
+                <td>{record.phone}</td>
+                <td>{new Date(record.time * 1000).getHours()}:00</td>
+                <td>
+                  <button
+                    className={styles.btn}
+                    onClick={() => {
+                      dispatch(removeRecord({ id: record.id }));
+                    }}>
+                    Отменить
+                  </button>
+                </td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </>
