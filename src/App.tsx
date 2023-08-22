@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 
-import { Layout } from './components/layout/Layout';
+import { Layout } from './components/layoutCntainer/Layout';
 import { AdminPage } from './pages/adminPage/AdminPage';
 import { UserPage } from './pages/userPage/UserPage';
 import { Header } from './components/header/Header';
